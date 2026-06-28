@@ -1,125 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>www.Econetnewhost2026.com</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-body {
-    margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-    background:#000; color:#0f0; display:flex; flex-direction:column; align-items:center; overflow-x:hidden;
-}
-/* Hamburger Toolbar */
-.navbar {
-    position:fixed; top:20px; right:20px; z-index:999;
-}
-.navbar i {
-    font-size:2.5em; cursor:pointer; color:#0f0; transition:0.3s;
-}
-.navbar i:hover { color:#00ff99; transform:scale(1.2); }
-.nav-links {
-    position:absolute; top:60px; right:0; display:none; flex-direction:column;
-    background:rgba(10,10,10,0.95); backdrop-filter:blur(15px); border:1px solid #0f0; border-radius:12px;
-}
-.nav-links a {
-    color:#0f0; padding:15px 25px; text-decoration:none; font-weight:bold; display:flex; align-items:center; gap:10px;
-    transition:0.3s;
-}
-.nav-links a:hover { color:#00ff99; background:rgba(0,255,0,0.05); transform:scale(1.05); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Heritage Based Projects Provider App</title>
+  <!-- Font Awesome 6 (Free) for real icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
 
-/* Glass Card */
-.glass-card {
-    background: rgba(10,10,10,0.75); border-radius:26px; backdrop-filter:blur(20px);
-    border:1px solid rgba(0,255,0,0.3); box-shadow:0 20px 50px rgba(0,0,0,0.8),0 0 30px rgba(0,255,0,0.2);
-    padding:35px; margin:120px 20px 20px; max-width:92%; text-align:center;
-    animation:float 8s ease-in-out infinite;
-}
-@keyframes float {0%{transform:translateY(0);}50%{transform:translateY(-12px);}100%{transform:translateY(0);}}
+    body {
+      background: #141414;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
 
-h1 {
-    font-size:3.6em; font-weight:900; background:linear-gradient(90deg,#0f0,#00ff99);
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 0 40px rgba(0,255,0,0.6); margin:10px 0;
-}
+    /* Netflix-style card – dark, bold, with subtle glow */
+    .app-container {
+      max-width: 520px;
+      width: 100%;
+      background: #1a1a1a;
+      border-radius: 2rem;
+      padding: 2.2rem 1.8rem 2.8rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      transition: all 0.2s ease;
+      text-align: center;
+      border: 1px solid #2a2a2a;
+    }
 
-.date {
-    background: rgba(255,0,0,0.5); color:white; padding:14px 30px; border-radius:50px; font-weight:bold;
-    font-size:1.3em; border:1px solid #f00; box-shadow:0 0 20px rgba(255,0,0,0.4); margin:15px 0;
-}
+    /* NETFLIX DISPLAY STYLE – bold typography, red accent, clean spacing */
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
 
-.server-status {
-    background: rgba(0,255,0,0.15); color:#00ff41; padding:14px 35px; border-radius:50px;
-    font-weight:bold; border:1px solid #0f0; margin:25px 0; box-shadow:0 0 25px rgba(0,255,0,0.5);
-    animation: pulse 3s infinite;
-}
-@keyframes pulse {0%{box-shadow:0 0 25px rgba(0,255,0,0.5);}50%{box-shadow:0 0 40px rgba(0,255,0,0.8);}100%{box-shadow:0 0 25px rgba(0,255,0,0.5);}}
+    .brand-icon {
+      font-size: 2.8rem;
+      color: #e50914;
+      filter: drop-shadow(0 4px 8px rgba(229, 9, 20, 0.3));
+      margin-bottom: 0.25rem;
+    }
 
-.info { font-size:1.45em; margin:28px 0; line-height:1.7; text-shadow:0 2px 15px rgba(0,0,0,0.9); }
+    .app-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      line-height: 1.2;
+    }
 
-.btn {
-    background: linear-gradient(135deg,#00ff41,#00cc00); color:#000; font-size:1.9em; font-weight:900;
-    padding:22px 70px; border-radius:22px; text-decoration:none; display:inline-block; margin:35px 0;
-    box-shadow:0 15px 40px rgba(0,255,0,0.5); transition:all 0.3s; border:2px solid #0f0;
-}
-.btn:hover { transform:translateY(-8px) scale(1.05); box-shadow:0 25px 60px rgba(0,255,0,0.7); }
+    .app-title span {
+      color: #e50914;
+      font-weight: 800;
+    }
 
-footer { margin-top:60px; font-size:1.1em; opacity:0.9; text-shadow:0 0 10px #0f0; }
+    .sub-powered {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #aaaaaa;
+      letter-spacing: 1.2px;
+      margin-top: 0.3rem;
+      border-top: 1px solid #2c2c2c;
+      padding-top: 0.6rem;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-/* WhatsApp Floating Button */
-.whatsapp-float { position:fixed; width:68px; height:68px; bottom:30px; right:20px;
-    background:#25D366; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-size:38px; box-shadow:0 10px 30px rgba(37,211,102,0.6); z-index:1000; border:3px solid #000;
-}
-.whatsapp-float i { animation:ring 2s infinite; }
-@keyframes ring {0%,100%{transform:rotate(0);}10%{transform:rotate(-30deg);}20%{transform:rotate(30deg);}30%{transform:rotate(-20deg);}40%{transform:rotate(20deg);}50%{transform:rotate(0);} }
-</style>
+    .sub-powered i {
+      color: #e50914;
+      margin: 0 6px;
+    }
+
+    /* Status card – Netflix-style red/white contrast */
+    .status-card {
+      background: #0f0f0f;
+      border-radius: 1.8rem;
+      padding: 2.2rem 1.5rem 1.8rem;
+      margin: 1.8rem 0 2rem;
+      border: 1px solid #2a2a2a;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .status-icon {
+      font-size: 3.6rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .status-icon .fa-wifi {
+      color: #00c853;
+    }
+
+    .status-icon .fa-wifi-slash {
+      color: #e50914;
+    }
+
+    .status-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    .status-sub {
+      font-size: 1rem;
+      color: #888888;
+      margin-top: 0.25rem;
+      font-weight: 400;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background: #e50914;
+      color: white;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      margin-top: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .status-badge i {
+      margin-right: 6px;
+    }
+
+    /* offline / online state */
+    .offline .status-icon .fa-wifi { display: none; }
+    .offline .status-icon .fa-wifi-slash { display: inline-block; }
+    .online .status-icon .fa-wifi { display: inline-block; }
+    .offline .status-icon .fa-wifi-slash { display: inline-block; }
+    .online .status-icon .fa-wifi-slash { display: none; }
+
+    .offline .status-badge {
+      background: #e50914;
+    }
+
+    .online .status-badge {
+      background: #00c853;
+    }
+
+    /* action button – Netflix red */
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      background: #e50914;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.9rem 2.4rem;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      box-shadow: 0 8px 20px rgba(229, 9, 20, 0.35);
+      margin-top: 0.5rem;
+      letter-spacing: 0.3px;
+      width: 100%;
+    }
+
+    .action-btn i {
+      font-size: 1.3rem;
+    }
+
+    .action-btn:hover {
+      background: #f6121d;
+      transform: scale(1.02);
+      box-shadow: 0 10px 28px rgba(229, 9, 20, 0.5);
+    }
+
+    .action-btn:active {
+      transform: scale(0.97);
+    }
+
+    .action-btn:disabled {
+      opacity: 0.5;
+      filter: grayscale(0.6);
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    /* offline message – prominent */
+    .offline-msg {
+      background: #1f1f1f;
+      border-left: 6px solid #e50914;
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      margin: 1.2rem 0 0.8rem;
+      color: #dddddd;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .offline-msg i {
+      color: #e50914;
+      font-size: 1.8rem;
+      min-width: 2rem;
+    }
+
+    .offline-msg span {
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    /* responsive */
+    @media (max-width: 480px) {
+      .app-container { padding: 1.8rem 1.2rem 2rem; }
+      .app-title { font-size: 1.6rem; }
+      .status-text { font-size: 1.3rem; }
+      .action-btn { font-size: 1rem; padding: 0.8rem 1.5rem; }
+    }
+
+    /* hide online-specific elements when offline */
+    .online-only {
+      display: none;
+    }
+    .online .online-only {
+      display: inline-flex;
+    }
+    .offline .offline-only {
+      display: flex;
+    }
+    .offline-only { display: none; }
+
+    /* powered by line – netflix style footer */
+    .footer-note {
+      margin-top: 1.8rem;
+      font-size: 0.75rem;
+      color: #5a5a5a;
+      letter-spacing: 0.8px;
+      border-top: 1px solid #262626;
+      padding-top: 1.2rem;
+    }
+
+    .footer-note i {
+      color: #e50914;
+      margin: 0 4px;
+    }
+
+    /* hide offline elements when online */
+    .offline .online-hide { display: none; }
+    .online .offline-hide { display: none; }
+  </style>
 </head>
 <body>
-
-<!-- Hamburger Toolbar -->
-<div class="navbar">
-    <i class="fas fa-bars" id="hamburger"></i>
-    <div class="nav-links" id="navLinks">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
-        <a href="whatsapp.html"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="channels.html"><i class="fas fa-tv"></i> All Channels</a>
+  <div class="app-container" id="appContainer">
+    <!-- Branding – Netflix style -->
+    <div class="brand">
+      <div class="brand-icon">
+        <i class="fas fa-film"></i>
+      </div>
+      <div class="app-title">
+        HERITAGE <span>BASED</span><br>PROJECTS PROVIDER
+      </div>
+      <div class="sub-powered">
+        <i class="fas fa-bolt"></i> POWERED BY SIR MALONE <i class="fas fa-crown"></i>
+      </div>
     </div>
-</div>
 
-<!-- Main Glass Card -->
-<div class="glass-card">
-    <h1>1 TAP WAKUTO NAKIRWA #ELONSKZW</h1>
-    <div class="date">📅 UPDATED: 3 January 2026</div>
-    <div class="server-status">⚡ HA TUNNEL SERVER ONLINE • SUPER FAST</div>
-    <div class="info">
-        <strong>📡 ECONET UNLIMITED</strong><br>
-        Musatengeserwe ma files ne team kunze uko<br>
-        USE THIS FILE 1 TAP WATO CONNECTED<br>
-        🔋 POWERED BY ELONSK🇿🇼
+    <!-- Status display – changes with network -->
+    <div class="status-card" id="statusCard">
+      <div class="status-icon">
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-wifi-slash"></i>
+      </div>
+      <div class="status-text" id="statusText">Connecting...</div>
+      <div class="status-sub" id="statusSub">Please check your network</div>
+      <div class="status-badge" id="statusBadge">
+        <i class="fas fa-circle"></i> <span id="badgeLabel">OFFLINE</span>
+      </div>
     </div>
-    <a href="files/ELONSK 🇿🇼 ECS.hat" class="btn" download>DOWNLOAD .HAT FILE 📂</a>
-</div>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://whatsapp.com/channel/0029VbBVpuzHltY7Yk3GZU0o" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <!-- Offline message (only visible when offline) -->
+    <div class="offline-msg offline-hide" id="offlineMsg">
+      <i class="fas fa-exclamation-triangle"></i>
+      <div><span>No Internet Access</span><br><small style="color:#999;">to access this app, please connect to Wi-Fi or mobile data</small></div>
+    </div>
 
-<footer>Made in Zimbabwe • Elonsk Files 2026</footer>
+    <!-- Primary action button: offline => gray/disabled, online => red & redirect -->
+    <button class="action-btn" id="mainActionBtn">
+      <i class="fas fa-play"></i> 
+      <span id="btnLabel">ENTER APP</span>
+      <i class="fas fa-arrow-right"></i>
+    </button>
 
-<script>
-// Hamburger toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-    if(navLinks.style.display === "flex"){
-        navLinks.style.display = "none";
-    } else {
-        navLinks.style.display = "flex";
-    }
-});
-</script>
+    <!-- small netflix-style footer -->
+    <div class="footer-note">
+      <i class="fas fa-tv"></i> HERITAGE · PROJECTS · 2026 <i class="fas fa-circle" style="font-size: 0.3rem; vertical-align: middle;"></i> 
+      <i class="fas fa-globe"></i> 
+    </div>
+  </div>
 
+  <script>
+    (function() {
+      "use strict";
+
+      // DOM elements
+      const container = document.getElementById('appContainer');
+      const statusText = document.getElementById('statusText');
+      const statusSub = document.getElementById('statusSub');
+      const badgeLabel = document.getElementById('badgeLabel');
+      const offlineMsg = document.getElementById('offlineMsg');
+      const mainBtn = document.getElementById('mainActionBtn');
+      const btnLabel = document.getElementById('btnLabel');
+
+      // target URL (from the prompt)
+      const TARGET_URL = 'https://zimsec.base44.app/Dashboard';
+
+      // Helper: update UI based on online status
+      function updateUI(isOnline) {
+        // remove both classes, then add the correct one
+        container.classList.remove('online', 'offline');
+        
+        if (isOnline) {
+          container.classList.add('online');
+          // status text
+          statusText.textContent = 'You are online';
+          statusSub.textContent = 'Connected to the internet';
+          badgeLabel.textContent = 'ONLINE';
+          // hide offline message
+          offlineMsg.style.display = 'none';
+          // enable button, change label
+          mainBtn.disabled = false;
+          btnLabel.textContent = 'GO TO DASHBOARD';
+          // change button icon (optional)
+          mainBtn.querySelector('.fa-play').className = 'fas fa-arrow-right';
+          // update badge color is handled by CSS
+        } else {
+          container.classList.add('offline');
+          statusText.textContent = 'No connection';
+          statusSub.textContent = 'Internet access required';
+          badgeLabel.textContent = 'OFFLINE';
+          // show offline message
+          offlineMsg.style.display = 'flex';
+          // disable button
+          mainBtn.disabled = true;
+          btnLabel.textContent = 'NO INTERNET';
+          // reset icon
+          mainBtn.querySelector('.fa-play').className = 'fas fa-wifi-slash';
+          // ensure the button shows offline state
+        }
+      }
+
+      // Check network status and update UI
+      function checkNetworkAndUpdate() {
+        const online = navigator.onLine;
+        updateUI(online);
+        return online;
+      }
+
+      // Redirect to dashboard if online (called from button)
+      function handleRedirect() {
+        if (navigator.onLine) {
+          // we are online: redirect to the target URL
+          window.location.href = TARGET_URL;
+        } else {
+          // just in case, update UI and show offline message
+          updateUI(false);
+          // small extra feedback
+          statusSub.textContent = 'Please connect to the internet';
+        }
+      }
+
+      // Setup event listeners for online/offline events (browser)
+      window.addEventListener('online', function() {
+        updateUI(true);
+        // optional: auto-redirect? we keep user control, but we can inform.
+        statusSub.textContent = 'You are back online! Click ENTER.';
+        // but we let user click the button.
+      });
+
+      window.addEventListener('offline', function() {
+        updateUI(false);
+        statusSub.textContent = 'Connection lost. Reconnect to continue.';
+      });
+
+      // Button click: redirect if online
+      mainBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (navigator.onLine) {
+          handleRedirect();
+        } else {
+          // just show offline status
+          updateUI(false);
+          // quick visual feedback
+          statusSub.textContent = 'No internet. Cannot access app.';
+        }
+      });
+
+      // initial check on page load
+      const initialOnline = checkNetworkAndUpdate();
+
+      // if online at load, we can optionally change button to redirect
+      if (initialOnline) {
+        // user is online, show ready state
+        statusSub.textContent = 'Click ENTER to access dashboard';
+        mainBtn.disabled = false;
+        btnLabel.textContent = 'ENTER DASHBOARD';
+        mainBtn.querySelector('.fa-play').className = 'fas fa-arrow-right';
+        // also remove offline message (if any)
+        offlineMsg.style.display = 'none';
+      } else {
+        // offline – set offline UI
+        updateUI(false);
+        mainBtn.disabled = true;
+        btnLabel.textContent = 'NO INTERNET';
+        offlineMsg.style.display = 'flex';
+      }
+
+      // extra: if the user clicks the offline message or any, we can show status
+      // but no need.
+      console.log('HERITAGE BASED PROJECTS PROVIDER APP · POWERED BY SIR MALONE');
+    })();
+  </script>
 </body>
 </html>
